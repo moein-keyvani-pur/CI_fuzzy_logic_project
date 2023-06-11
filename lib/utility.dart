@@ -9,3 +9,7 @@ enum PetalWidthValues { medium, height, veryHeigh, large, veryLarge, dontCare }
 enum AllValues { medium, height, veryHeigh, large, veryLarge, dontCare }
 
 enum Species { setosa, versicolor, virginica }
+
+enum SelectionSurvivors { rouletteWheel, sus, tournament }
+
+const kRuleGenerate = 30;

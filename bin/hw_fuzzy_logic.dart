@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:hw_fuzzy_logic/extention.dart';
 import 'package:hw_fuzzy_logic/features/xp.dart';
+import 'package:hw_fuzzy_logic/michigan.dart';
 import 'package:hw_fuzzy_logic/rule.dart';
 import 'package:hw_fuzzy_logic/utility.dart';
 
@@ -24,7 +25,8 @@ void main(List<String> arguments) {
   }
 
   var mySamples = GeneralHelper.readDataFromFile();
-  List<Rule> rules = List.generate(30, (index) => _createRandomRule());
+  List<Rule> rules =
+      List.generate(kRuleGenerate, (index) => _createRandomRule());
 
   for (var i = 0; i < rules.length; i++) {
     print('\nrule ${i + 1} ------------->>>>> ${rules[i]}\n');
@@ -37,6 +39,11 @@ void main(List<String> arguments) {
       print('${j + 1}- ${mySamples[j]}');
     }
     _setResultRule(rule: rules[i], mySamples: mySamples);
+  }
+  Michigan michigan = Michigan(rules: rules, mySamples: mySamples);
+  for (var element in michigan.getBestRoules(
+      selectionSurvivorsMethod: SelectionSurvivors.rouletteWheel)) {
+    print(element);
   }
 }
 
