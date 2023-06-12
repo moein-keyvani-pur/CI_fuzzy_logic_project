@@ -16,23 +16,35 @@ class SepalLengthFeature {
         return _heightMembershipSepalLength();
       case SepalLengthValues.veryHeigh:
         return _veryHeightMembershipSepalLength();
-      case SepalLengthValues.large:
-        return _largeMembershipSepalLength();
+      case SepalLengthValues.low:
+        return _lowMembershipSepalLength();
       default:
-        return _veryLargeMembershipSepalLength();
+        return _veryLowMembershipSepalLength();
     }
   }
 
-  // double _smallMembershipSepalLength() {
-  //   var mySLength = sLength;
-  //   if (mySLength < 10) {
-  //     return 1;
-  //   } else if (10 <= mySLength && mySLength < 20) {
-  //     return -0.1 * mySLength + 2;
-  //   } else {
-  //     return 0;
-  //   }
-  // }
+  double _veryLowMembershipSepalLength() {
+    var mySLength = sLength;
+    if (mySLength < 10) {
+      return 1;
+    } else if (10 <= mySLength && mySLength < 20) {
+      return -0.1 * mySLength + 2;
+    } else {
+      return 0;
+    }
+  }
+
+  double _lowMembershipSepalLength() {
+    var mySLength = sLength;
+    if (40 <= mySLength && mySLength < 45) {
+      return 0.2 * mySLength - 8;
+    }
+    if (45 <= mySLength) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
 
   double _mediumMembershipSepalLength() {
     var mySLength = sLength;
@@ -61,29 +73,6 @@ class SepalLengthFeature {
   }
 
   double _veryHeightMembershipSepalLength() {
-    var mySLength = sLength;
-    if (mySLength < 10) {
-      return 1;
-    } else if (10 <= mySLength && mySLength < 20) {
-      return -0.1 * mySLength + 2;
-    } else {
-      return 0;
-    }
-  }
-
-  double _largeMembershipSepalLength() {
-    var mySLength = sLength;
-    if (40 <= mySLength && mySLength < 45) {
-      return 0.2 * mySLength - 8;
-    }
-    if (45 <= mySLength) {
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-
-  double _veryLargeMembershipSepalLength() {
     var mySLength = sLength;
     if (mySLength < 10) {
       return 1;

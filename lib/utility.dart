@@ -1,12 +1,12 @@
-enum SepalLengthValues { medium, height, veryHeigh, large, veryLarge, dontCare }
+enum SepalLengthValues { veryLow, low, medium, height, veryHeigh, dontCare }
 
-enum SepalWidthValues { medium, height, veryHeigh, large, veryLarge, dontCare }
+enum SepalWidthValues { veryLow, low, medium, height, veryHeigh, dontCare }
 
-enum PetalLengthValues { medium, height, veryHeigh, large, veryLarge, dontCare }
+enum PetalLengthValues { veryLow, low, medium, height, veryHeigh, dontCare }
 
-enum PetalWidthValues { medium, height, veryHeigh, large, veryLarge, dontCare }
+enum PetalWidthValues { veryLow, low, medium, height, veryHeigh, dontCare }
 
-enum AllValues { medium, height, veryHeigh, large, veryLarge, dontCare }
+enum AllValues { veryLow, low, medium, height, veryHeigh, dontCare }
 
 enum Species { setosa, versicolor, virginica }
 

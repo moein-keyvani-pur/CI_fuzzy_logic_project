@@ -16,23 +16,35 @@ class PetalLengthFeatrue {
         return _heightMembershipPetalLength();
       case PetalLengthValues.veryHeigh:
         return _veryHeightMembershipPetalLength();
-      case PetalLengthValues.large:
-        return _largeMembershipPetalLength();
+      case PetalLengthValues.low:
+        return _lowMembershipPetalLength();
       default:
-        return _veryLargeMembershipPetalLength();
+        return _veryLowMembershipPetalLength();
     }
   }
 
-  // double _smallMembershipSepalLength() {
-  //   var mySLength = sLength;
-  //   if (mySLength < 10) {
-  //     return 1;
-  //   } else if (10 <= mySLength && mySLength < 20) {
-  //     return -0.1 * mySLength + 2;
-  //   } else {
-  //     return 0;
-  //   }
-  // }
+  double _veryLowMembershipPetalLength() {
+    var myPLength = pLength;
+    if (myPLength < 10) {
+      return 1;
+    } else if (10 <= myPLength && myPLength < 20) {
+      return -0.1 * myPLength + 2;
+    } else {
+      return 0;
+    }
+  }
+
+  double _lowMembershipPetalLength() {
+    var myPLength = pLength;
+    if (40 <= myPLength && myPLength < 45) {
+      return 0.2 * myPLength - 8;
+    }
+    if (45 <= myPLength) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
 
   double _mediumMembershipPetalLength() {
     var myPLength = pLength;
@@ -61,29 +73,6 @@ class PetalLengthFeatrue {
   }
 
   double _veryHeightMembershipPetalLength() {
-    var myPLength = pLength;
-    if (myPLength < 10) {
-      return 1;
-    } else if (10 <= myPLength && myPLength < 20) {
-      return -0.1 * myPLength + 2;
-    } else {
-      return 0;
-    }
-  }
-
-  double _largeMembershipPetalLength() {
-    var myPLength = pLength;
-    if (40 <= myPLength && myPLength < 45) {
-      return 0.2 * myPLength - 8;
-    }
-    if (45 <= myPLength) {
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-
-  double _veryLargeMembershipPetalLength() {
     var myPLength = pLength;
     if (myPLength < 10) {
       return 1;

@@ -16,23 +16,35 @@ class PetalWidthFeatrue {
         return _heightMembershipPetalWidth();
       case PetalWidthValues.veryHeigh:
         return _veryHeightMembershipPetalWidth();
-      case PetalWidthValues.large:
-        return _largeMembershipPetalWidth();
+      case PetalWidthValues.low:
+        return _lowMembershipPetalWidth();
       default:
-        return _veryLargeMembershipPetalWidth();
+        return _veryLowMembershipPetalWidth();
     }
   }
 
-  // double _smallMembershipSepalLength() {
-  //   var mySLength = sLength;
-  //   if (mySLength < 10) {
-  //     return 1;
-  //   } else if (10 <= mySLength && mySLength < 20) {
-  //     return -0.1 * mySLength + 2;
-  //   } else {
-  //     return 0;
-  //   }
-  // }
+  double _veryLowMembershipPetalWidth() {
+    var myPWidth = pWidth;
+    if (myPWidth < 10) {
+      return 1;
+    } else if (10 <= myPWidth && myPWidth < 20) {
+      return -0.1 * myPWidth + 2;
+    } else {
+      return 0;
+    }
+  }
+
+  double _lowMembershipPetalWidth() {
+    var myPWidth = pWidth;
+    if (40 <= myPWidth && myPWidth < 45) {
+      return 0.2 * myPWidth - 8;
+    }
+    if (45 <= myPWidth) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
 
   double _mediumMembershipPetalWidth() {
     var myPWidth = pWidth;
@@ -66,29 +78,6 @@ class PetalWidthFeatrue {
       return 1;
     } else if (10 <= myPWith && myPWith < 20) {
       return -0.1 * myPWith + 2;
-    } else {
-      return 0;
-    }
-  }
-
-  double _largeMembershipPetalWidth() {
-    var myPWidth = pWidth;
-    if (40 <= myPWidth && myPWidth < 45) {
-      return 0.2 * myPWidth - 8;
-    }
-    if (45 <= myPWidth) {
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-
-  double _veryLargeMembershipPetalWidth() {
-    var myPWidth = pWidth;
-    if (myPWidth < 10) {
-      return 1;
-    } else if (10 <= myPWidth && myPWidth < 20) {
-      return -0.1 * myPWidth + 2;
     } else {
       return 0;
     }
