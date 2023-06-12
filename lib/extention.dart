@@ -47,7 +47,6 @@ class GeneralHelper {
                   user[5].split('-')[1].trim().toLowerCase())
               .first));
     }
-
     return users;
   }
 }

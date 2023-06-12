@@ -23,6 +23,7 @@ class Rule {
   PetalLengthValues get petalLengthValues => _petalLength;
   PetalWidthValues get petalWidthValues => _petalWidth;
   Species? get species => _species;
+  double get cf => _cf ?? 0.0;
   set setCf(double cfArg) => _cf = cfArg;
   set setSpecies(Species speciesArg) => _species = speciesArg;
 
