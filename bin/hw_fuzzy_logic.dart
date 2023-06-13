@@ -41,9 +41,12 @@ void main(List<String> arguments) {
     _setResultRule(rule: rules[i], mySamples: mySamples);
   }
   Michigan michigan = Michigan(rules: rules, mySamples: mySamples);
+  print('\n-----------------------------------------------------------\n');
+  var i = 1;
   for (var element in michigan.getBestRoules(
       selectionSurvivorsMethod: SelectionSurvivors.rouletteWheel)) {
-    print(element);
+    print('$i - $element');
+    i++;
   }
 }
 

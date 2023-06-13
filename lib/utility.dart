@@ -12,4 +12,4 @@ enum Species { setosa, versicolor, virginica }
 
 enum SelectionSurvivors { rouletteWheel, sus, tournament }
 
-const kRuleGenerate = 50;
+const kRuleGenerate = 30;
