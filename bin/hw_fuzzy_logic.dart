@@ -44,7 +44,7 @@ void main(List<String> arguments) {
   print('\n-----------------------------------------------------------\n');
   var i = 1;
   for (var element in michigan.getBestRoules(
-      selectionSurvivorsMethod: SelectionSurvivors.rouletteWheel)) {
+      selectionSurvivorsMethod: SelectionSurvivors.sus)) {
     print('$i - $element');
     i++;
   }
